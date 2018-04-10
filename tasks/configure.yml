@@ -45,7 +45,7 @@
     - Restart Hbase
 
 - name: Configure JAVA_HOME in conf/hbase-env.sh
-  lineinfile: dest="{{ hbase_dir }}/conf/hbase-env.sh" regexp="^export JAVA_HOME=" line="export JAVA_HOME={{ lookup('env','JAVA_HOME') }}"
+  lineinfile: dest="{{ hbase_dir }}/conf/hbase-env.sh" regexp="^export JAVA_HOME=" line="export JAVA_HOME={{ hbase_java_home }}"
   notify:
     - Restart Hbase
 

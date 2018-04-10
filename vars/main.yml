@@ -4,3 +4,4 @@ hbase_upstart_conf: /etc/init/hbase.conf
 hbase_root_dir: /opt/hbase
 hbase_group: hbase
 hbase_user: hbase
+hbase_java_home: "{{ lookup('env','JAVA_HOME') }}"
